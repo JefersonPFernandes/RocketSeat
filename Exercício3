@@ -1,0 +1,36 @@
+namespace HelloWord;
+using System.Globalization;
+
+class Program
+{
+    static void Main()
+    {
+        double num1;
+        double num2;
+        Console.WriteLine("Digite o primeiro número com duas casas decimais:");
+        num1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        Console.WriteLine("Digite o segundo número com duas casas decimais:");
+        num2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        double soma, subtracao, multiplicacao, divisao, media;
+
+        soma = num1 + num2;
+        subtracao = num1 - num2;
+        multiplicacao = num1 * num2;
+        divisao = num1 / num2;
+        media = (num1 + num2) / 2;
+
+        Console.WriteLine("Soma = " + soma.ToString("F2", CultureInfo.InvariantCulture));
+        Console.WriteLine("Subtração = " + subtracao.ToString("F2", CultureInfo.InvariantCulture));
+        Console.WriteLine("Multiplicação = " + multiplicacao.ToString("F2", CultureInfo.InvariantCulture));
+        Console.WriteLine("Divisão = " + divisao.ToString("F2", CultureInfo.InvariantCulture));
+        Console.WriteLine("Média = " + media.ToString("F2", CultureInfo.InvariantCulture));
+    }
+}
+
+/*1. Crie um programa com 2 valores do tipo **`double`** já declarados ****que retorne:
+    - A soma entre esses dois números;
+    - A subtração entre os dois números;
+    - A multiplicação entre os dois números;
+    - A divisão entre os dois números(vale uma verificação se o segundo número é 0!);
+    - A média entre os dois números.*/
