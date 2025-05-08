@@ -1,0 +1,19 @@
+namespace HelloWord;
+using System.Globalization;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Digite uma ou mais palavras:");
+        string entrada = Console.ReadLine();
+        string[] palavras = entrada.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        Console.WriteLine("Quantidade de caracteres por palavra:");
+        foreach (string palavra in palavras)
+        {
+            Console.WriteLine(palavra + " tem " + palavra.Length + " caracteres!");
+        }
+    }
+}
+
+//Crie um programa em que o usuário digita uma ou mais palavras e é exibido a quantidade de caracteres que a palavra inserida tem.
