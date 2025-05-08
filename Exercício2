@@ -1,0 +1,17 @@
+namespace HelloWord;
+
+class Program
+{
+    static void Main()
+    {
+        string nome;
+        string sobrenome;
+        Console.WriteLine("Digite se nome:");
+        nome = Console.ReadLine();
+        Console.WriteLine("Digite se sobrenome:");
+        sobrenome = Console.ReadLine();
+        Console.WriteLine("Olá " + nome + " " + sobrenome);
+    }
+}
+
+//Crie um programa que concatene um nome e um sobrenome inseridos pelo usuário e ao final exiba o nome completo.
