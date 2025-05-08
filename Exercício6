@@ -1,0 +1,25 @@
+using System.Globalization;
+
+public class ExibirDataHora
+{
+    public static void Main()
+    {
+        DateTime agora = DateTime.Now;
+        CultureInfo culturaBrasileira = new CultureInfo("pt-BR");
+
+        Console.WriteLine("Data e hora no formato completo:");
+        Console.WriteLine(agora.ToString(culturaBrasileira));
+        Console.WriteLine();
+
+        Console.WriteLine("Apenas a data no formato 'dd/MM/yyyy':");
+        Console.WriteLine(agora.ToString("dd/MM/yyyy"));
+        Console.WriteLine();
+
+        Console.WriteLine("Apenas a hora no formato de 24 horas:");
+        Console.WriteLine(agora.ToString("HH:mm:ss"));
+        Console.WriteLine();
+
+        Console.WriteLine("Data com o mês por extenso:");
+        Console.WriteLine(agora.ToString("dd 'de' MMMM 'de' yyyy", culturaBrasileira));
+    }
+}
